@@ -13,6 +13,6 @@ angular.module('pub.user_profil', ['ngRoute'])
         });
     }])
 
-    .controller('userController', [function() {
+    .controller('userController', ['$scope', function($scope) {
         $scope.message = 'User Profil';
     }]);

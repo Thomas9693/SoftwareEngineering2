@@ -13,6 +13,6 @@ angular.module('pub.home', ['ngRoute'])
         });
     }])
 
-    .controller('homeController', [function() {
+    .controller('homeController', ['$scope', function($scope) {
         $scope.message = 'Everyone come and see how good I look!';
     }]);

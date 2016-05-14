@@ -13,6 +13,12 @@ angular.module('pub', [
 ]).
 config(['$routeProvider', function($routeProvider) {
     $routeProvider.otherwise({redirectTo: '/home'});
-}]);
+}])
+    .controller('nav', ['$scope', function ($scope) {
+        $(".nav a").on("click", function(){
+            $(".nav").find(".active").removeClass("active");
+            $(this).parent().addClass("active");
+        });
+    }]);
 
 
