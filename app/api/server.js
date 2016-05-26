@@ -1,3 +1,4 @@
+var path = require('path');
 var express = require('express');
 var app = express();
 
@@ -5,6 +6,8 @@ var publist = require('./api').getPubList;
 var pubid = require('./api').getPub;
 var userlist = require('./api').getUser;
 var userid = require('./api').getUserList;
+
+app.use(express.static(path.resolve('../')));
 
 app.get('/pub/', function(req, res){
   var result = publist();
@@ -27,7 +30,7 @@ app.get('/user/:id', function(req, res){
 });
 
 app.get('/', function(req, res){
-    res.sendFile('../index.html');
+    res.sendFile('index.html');
 });
 
 app.listen(5000);
