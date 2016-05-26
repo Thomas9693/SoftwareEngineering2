@@ -60,6 +60,6 @@ module.exports = exports = {
   insertUser,
   getPub,
   getUser,
-  getPubList
+  getPubList,
   getUserList
 }

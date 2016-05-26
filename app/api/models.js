@@ -62,13 +62,13 @@ var PubSchema = new mongoose.Schema({
         required: true
     },
     sky: {
-        type: boolean
+        type: Boolean
     }
 });
 
 var Pub = mongoose.model("Pubs", PubSchema);
 
-module.exports = export = {
+module.exports = exports = {
     User,
     Pub
 }
