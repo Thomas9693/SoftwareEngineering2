@@ -26,4 +26,8 @@ app.get('/user/:id', function(req, res){
   res.send(result);
 });
 
+app.get('/', function(req, res){
+    res.sendFile('../index.html');
+});
+
 app.listen(5000);
