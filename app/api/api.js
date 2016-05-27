@@ -3,6 +3,20 @@ var mongoose = require('mongoose');
 var UserModel = require('./models').User;
 var PubModel = require('./models').Pub;
 
+var JSON = require('./../json/users');
+
+mongoose.connect('mongodb://localhost/PubRace');
+
+var db = mongoose.connection;
+
+db.on('error', function(err){
+    console.log('connection error', err);
+});
+
+db.once('open', function(){
+    console.log('connected');
+});
+
 var insertUser = function(userproperties, callback) {
     var user = new UserModel(userproperties);
     user.save(function(err, user){
