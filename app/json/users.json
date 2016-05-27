@@ -1,0 +1,8 @@
+{
+    "name": "Max Mustermann",
+    "birthday": "1995-04-23T18:25:43.511Z",
+    "gender": "m" ,
+    "picture": "http://www.fbw-filmbewertung.com/uploads/fbwdb_film/poster/d2da494115b0bebe5abcfff65152fc8b02f81400.jpg",
+    "hometown": "Stuttgart",
+    "interests": ["Fussball", "Bundesliga"]
+}

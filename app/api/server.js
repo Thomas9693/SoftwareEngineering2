@@ -30,7 +30,7 @@ app.get('/user/:id', function(req, res){
 });
 
 app.get('/', function(req, res){
-    res.sendFile('index.html');
+    res.sendFile('index.html', {'root': path.resolve('/../')});
 });
 
 app.listen(5000);

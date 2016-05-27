@@ -3,6 +3,8 @@ var mongoose = require('mongoose');
 var UserModel = require('./models').User;
 var PubModel = require('./models').Pub;
 
+var JSON = require('./../json/users');
+
 mongoose.connect('mongodb://localhost/PubRace');
 
 var db = mongoose.connection;
