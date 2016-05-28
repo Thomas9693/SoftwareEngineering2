@@ -1,0 +1,30 @@
+<div class="jumbotron text-center">
+    <h1>{{ pub_name }}</h1>
+
+    <p>{{ pub_slogan }}</p>
+    <span id="sky-indicator"><img src="media/img/Sky_Signature.png" width="60"></span>
+</div>
+
+<div class="col-md-7 centered">
+    <div class="row">
+        <div class="col-md-6">
+            <h3>Öffnungzeiten</h3>
+            <div class="opening-hours">
+                {{ opening_hours }}
+            </div>
+        </div>
+        <div class="col-md-6">
+            <h3>Adresse</h3>
+            <div class="address">
+                <p>Straße: {{ pub_street }} </p>
+                <p>Stadt: {{ pub_zip_code }} {{ pub_city }} </p>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <h3>Speißekarte</h3>
+            <p> {{ menu }} </p>
+        </div>
+    </div>
+</div>
