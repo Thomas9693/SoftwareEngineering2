@@ -50,7 +50,7 @@ var getUserList = function(callback){
     var usermap = {};
 
     users.forEach(function(item){
-      usermap[item.id] = user;
+      usermap[item.id] = item;
     });
     callback(usermap);
   });
@@ -61,7 +61,7 @@ var getPubList = function(callback){
     var pubmap = {};
 
     pubs.forEach(function(item){
-      pubmap[item.id] = pub;
+      pubmap[item.id] = item;
     });
     callback(pubmap);
   });
