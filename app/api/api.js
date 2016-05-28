@@ -3,8 +3,6 @@ var mongoose = require('mongoose');
 var UserModel = require('./models').User;
 var PubModel = require('./models').Pub;
 
-var JSON = require('./../json/users');
-
 mongoose.connect('mongodb://localhost/PubRace');
 
 var db = mongoose.connection;
@@ -35,15 +33,15 @@ var insertPub = function(pubproperties, callback) {
     })
 };
 
-var getPub = function(id){
-  PubModel.findById(id, function(err,doc){
-    return doc;
+var getPub = function(id, callback){
+     PubModel.findById(id, function(err,doc){  
+     callback(doc);
   });
 };
 
 var getUser = function(id){
   Usermodel.findById(id,function(err,doc){
-    return doc;
+    callback(doc);
   });
 };
 
@@ -54,18 +52,18 @@ var getUserList = function(){
     users.forEach(function(item){
       usermap[item.id] = user;
     });
-    return usermap;
+    callback(usermap);
   });
 };
 
 var getPubList = function(){
-  Pubmodel.find({}, function(err,pubs){
+  PubModel.find({}, function(err,pubs){
     var pubmap = {};
 
     pubs.forEach(function(item){
       pubmap[item.id] = pub;
     });
-    return usermap;
+    callback(pubmap);
   });
 };
 

@@ -2,10 +2,14 @@ var path = require('path');
 var express = require('express');
 var app = express();
 
+var json = require('./../json/pubs.json');
+
 var publist = require('./api').getPubList;
 var pubid = require('./api').getPub;
 var userlist = require('./api').getUser;
 var userid = require('./api').getUserList;
+var userinsert = require('./api').insertUser;
+var pubinsert = require('./api').insertPub;
 
 app.use(express.static(path.resolve('../')));
 
@@ -15,8 +19,10 @@ app.get('/pub/', function(req, res){
 });
 
 app.get('/pub/:id', function(req, res, next){
-  var result = pubid(req.params.id);
-  res.send(result);
+  pubid(req.params.id, function(result) {
+	console.log(result);
+  	res.send(result);
+  });
 });
 
 app.get('/user/', function(req, res){
@@ -34,3 +40,5 @@ app.get('/', function(req, res){
 });
 
 app.listen(5000);
+
+console.log('server listen at port 5000');
