@@ -1,0 +1,12 @@
+{
+    "name": "Irish Pub",
+    "category": "Pub",
+    "place": {
+        "street": "Hauptstraße 8",
+        "postcode": "71679",
+        "town": "Asperg"
+    },
+    "openings": ["Mo-So 10 - 24 Uhr"],
+    "menu": "Bier 2 Euro",
+    "sky": "true"
+}
