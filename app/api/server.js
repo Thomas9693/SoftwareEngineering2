@@ -14,8 +14,9 @@ var pubinsert = require('./api').insertPub;
 app.use(express.static(path.resolve('../')));
 
 app.get('/pub/', function(req, res){
-  var result = publist();
-  res.send(result);
+  publist(function(result){
+    res.send(result);
+  };
 });
 
 app.get('/pub/:id', function(req, res, next){
@@ -26,13 +27,15 @@ app.get('/pub/:id', function(req, res, next){
 });
 
 app.get('/user/', function(req, res){
-  var result = userlist();
-  res.send(result);
+  userlist(function(result){
+        res.send(result);
+      ));
 });
 
 app.get('/user/:id', function(req, res){
-  var result = publist();
-  res.send(result);
+  publist(function(result){
+        res.send(result);
+      ));
 });
 
 app.get('/', function(req, res){
