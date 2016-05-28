@@ -40,13 +40,13 @@ var getPub = function(id, callback){
 };
 
 var getUser = function(id, callback){
-  Usermodel.findById(id,function(err,doc){
+  UserModel.findById(id,function(err,doc){
     callback(doc);
   });
 };
 
 var getUserList = function(callback){
-  Usermodel.find({}, function(err,users){
+  UserModel.find({}, function(err,users){
     var usermap = {};
 
     users.forEach(function(item){

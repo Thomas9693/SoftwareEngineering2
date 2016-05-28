@@ -6,8 +6,8 @@ var json = require('./../json/pubs.json');
 
 var publist = require('./api').getPubList;
 var pubid = require('./api').getPub;
-var userlist = require('./api').getUser;
-var userid = require('./api').getUserList;
+var userlist = require('./api').getUserList;
+var userid = require('./api').getUser;
 var userinsert = require('./api').insertUser;
 var pubinsert = require('./api').insertPub;
 
@@ -16,7 +16,7 @@ app.use(express.static(path.resolve('../')));
 app.get('/pub/', function(req, res){
   publist(function(result){
     res.send(result);
-  };
+  });
 });
 
 app.get('/pub/:id', function(req, res, next){
@@ -29,13 +29,13 @@ app.get('/pub/:id', function(req, res, next){
 app.get('/user/', function(req, res){
   userlist(function(result){
         res.send(result);
-      ));
+      });
 });
 
 app.get('/user/:id', function(req, res){
-  publist(function(result){
+  userid(req.params.id, function(result){
         res.send(result);
-      ));
+      });
 });
 
 app.get('/', function(req, res){
