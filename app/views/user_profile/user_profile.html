@@ -1,5 +1,26 @@
 <div class="jumbotron text-center">
-    <h1>User</h1>
+    <span id="user-pic"><img src="{{user_pic}}" width="150"></span>
+    <h1>{{ user_name }}</h1>
 
-    <p>{{ message }}</p>
+    <p>{{user_gender}} {{ user_birthday }}</p>
+
+</div>
+
+<div class="col-md-7 centered">
+    <div class="row">
+        <div class="col-md-6">
+            <h3>Hometown</h3>
+            <div class="Hometown">
+                {{ user_hometown }}
+            </div>
+        </div>
+        <div class="col-md-6">
+            <h3>Interessen</h3>
+            <div class="Interessen">
+                <ul>
+                    <li ng-repeat="interests in user_interests">{{interests}}</li>
+                </ul>
+            </div>
+        </div>
+    </div>
 </div>
