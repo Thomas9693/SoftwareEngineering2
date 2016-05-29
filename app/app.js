@@ -17,5 +17,3 @@ angular.module('pub', [
             $(this).parent().addClass("active");
         });
     }]);
-
-
