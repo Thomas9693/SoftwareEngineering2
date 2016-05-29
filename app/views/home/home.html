@@ -1,5 +1,13 @@
 <div class="jumbotron text-center">
-    <h1>Herzlich Willkommen auf unserer Pub Rating Website</h1>
-
-    <p>{{ message }}</p>
+    <div id="Welcome">
+        <h1>{{welcome}}</h1>
+    </div>
+        <p>Pubs:</p>
+        <div id="List" ng-repeat="post in posts">
+            -{{post.pubname}}
+        </div>
+        <p>User:</p>
+        <div id="List" ng-repeat="post in posts">
+            -{{post.username}}
+        </div>
 </div>

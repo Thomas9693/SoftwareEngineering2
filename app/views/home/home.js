@@ -14,5 +14,18 @@ angular.module('pub.home', ['ngRoute'])
     }])
 
     .controller('homeController', ['$scope', function($scope) {
-        $scope.message = 'Everyone come and see how good I look!';
+
+        $.get("http://tomtom9693.no-ip.org/user/", function(data){
+            alert("User: " + data);
+        });
+        $.get("http://tomtom9693.no-ip.org/pub/", function(data){
+            alert("Pubs: " + data);
+        });
+
+        $scope.welcome = 'Welcome to PubRace!';
+        $scope.posts = [
+            {pubname: 'Tequila Bar', username: 'Max Mustermann'},
+            {pubname: 'Troll', username: 'Yoda'},
+            {pubname: '7 Grad', username: 'Mr. Unknown'},
+        ];
     }]);

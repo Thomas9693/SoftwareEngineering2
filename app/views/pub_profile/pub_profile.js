@@ -15,9 +15,10 @@ angular.module('pub.pub_profil', ['ngRoute'])
 
     .controller('pubController', ['$scope', function($scope) {
 
-        //$.get('localhost/api/pub/'+ pub_id, function(data){
-
+        //$.get("http://tomtom9693.no-ip.org/pub/57496d453a818f3e249aa06d", function(data){
+         //   alert("Data: " + data.name);
         //});
+        
         var pub_name = 'Tequila Bar';
         var pub_slogan = 'Wo dicht wenn nicht hier?!';
         var opening_hours = 'Mo: 16:00 - 00:00 \n Fr - Sa: 17:00 - 04:00 \n  So: Ruhetag';
